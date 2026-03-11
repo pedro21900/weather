@@ -1,10 +1,22 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "weather"
 version = "0.1.0"
-description = "Add your description here"
+description = "Weather MCP server"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.10"
+
 dependencies = [
     "httpx>=0.28.1",
     "mcp[cli]>=1.26.0",
 ]
+
+authors = [
+    {name = "Pedro Lenonn"}
+]
+
+[project.scripts]
+weather = "weather:main"
